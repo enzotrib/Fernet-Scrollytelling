@@ -1,0 +1,64 @@
+---
+import ScrollExperience from "../components/ScrollExperience";
+import "../styles/global.css";
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Fernet | Scrollytelling Experience</title>
+		<meta
+			name="description"
+			content="Una experiencia cinematográfica inmersiva basada en scroll y HTML5 Canvas."
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700;900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="bg-black text-white font-['Inter',sans-serif]">
+		<main>
+			<ScrollExperience client:load />
+		</main>
+
+		<footer
+			class="bg-black py-20 px-8 text-center text-gray-500 border-t border-white/5 relative z-10"
+		>
+			<p>© 2026 Scrollytelling Engine. All rights reserved.</p>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--accent: 0, 255, 255;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	body::-webkit-scrollbar-track {
+		background: #000;
+	}
+
+	body::-webkit-scrollbar-thumb {
+		background: #222;
+		border-radius: 10px;
+	}
+
+	body::-webkit-scrollbar-thumb:hover {
+		background: #333;
+	}
+</style>

@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@layer base {
+    html {
+        @apply antialiased;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-black overflow-x-hidden;
+    }
+}
+
+.text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600;
+}
